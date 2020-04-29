@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout tools:context=".MainActivity" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:layout_height="100dp" android:layout_width="match_parent" android:textSize="40sp" android:textColor="#FFFFFF" android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textAlignment="textEnd" android:background="#2C3033" android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:id="@+id/tvMainText"> </TextView>
+
+    <TextView android:layout_height="100dp" android:layout_width="match_parent" android:textSize="40sp" android:textColor="#FFFFFF" android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textAlignment="textEnd" android:background="#2C3033" android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:id="@+id/tvSecondaryText" android:layout_marginTop="100dp" android:layout_below="@+id/tvMainText"> </TextView>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:background="#174FA6" android:id="@+id/subFunction" android:layout_below="@+id/tvSecondaryText" android:orientation="horizontal">
+
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="#FFFFFF" android:background="#174FA6" android:id="@+id/btRoot" android:text="√" android:layout_weight="1"> </Button>
+
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="#FFFFFF" android:background="#174FA6" android:id="@+id/btExp" android:text="m^2" android:layout_weight="1"> </Button>
+
+</LinearLayout>
+
+
+    -<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_below="@+id/subFunction" android:orientation="horizontal">
+
+
+    -<LinearLayout android:layout_height="match_parent" android:layout_width="0dp" android:id="@+id/mainLayout" android:orientation="vertical" android:layout_weight="4">
+
+
+    -<LinearLayout android:layout_height="0dp" android:layout_width="match_parent" android:orientation="horizontal" android:layout_weight="1" tools:ignore="NestedWeights">
+
+    <Button android:layout_height="match_parent" android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt7" android:text="7" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt8" android:text="8" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt9" android:text="9" style="@style/calc_button"/>
+
+</LinearLayout>
+
+
+    -<LinearLayout android:layout_height="0dp" android:layout_width="match_parent" android:orientation="horizontal" android:layout_weight="1">
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt4" android:text="4" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt5" android:text="5" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt6" android:text="6" style="@style/calc_button"/>
+
+</LinearLayout>
+
+
+    -<LinearLayout android:layout_height="0dp" android:layout_width="match_parent" android:orientation="horizontal" android:layout_weight="1">
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt1" android:text="1" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt2" android:text="2" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt3" android:text="3" style="@style/calc_button"/>
+
+</LinearLayout>
+
+
+    -<LinearLayout android:layout_height="0dp" android:layout_width="match_parent" android:orientation="horizontal" android:layout_weight="1">
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/bt0" android:text="0" style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/btDot" android:text="," style="@style/calc_button"/>
+
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:id="@+id/btEqual" android:text="=" style="@style/calc_button"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+    -<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical">
+
+    <Button android:id="@+id/btDelete" android:text="C" style="@style/operation_button"/>
+
+    <Button android:id="@+id/btClear" android:text="CE" style="@style/operation_button"/>
+
+    <Button android:id="@+id/btDivision" android:text="÷" style="@style/operation_button"/>
+
+    <Button android:id="@+id/btMultiplication" android:text="×" style="@style/operation_button"/>
+
+    <Button android:id="@+id/btMinus" android:text="-" style="@style/operation_button"/>
+
+    <Button android:id="@+id/btPlus" android:text="+" style="@style/operation_button"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
