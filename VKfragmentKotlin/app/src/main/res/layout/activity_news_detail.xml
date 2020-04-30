@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".NewsDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/topchik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topbarblue"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#5081b9"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <ImageButton
+                android:id="@+id/leftbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#5081b9"
+                android:paddingRight="8dp"
+                android:src="@drawable/ic_keyboard_backspace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:text="Запись на стене"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#5081b9"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ic_3dots" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topchik">
+        <RelativeLayout
+            android:id="@+id/forScrollParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/image_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/image"
+                android:text="Something"
+                android:textColor="#5081b9"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/time_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_name"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/image"
+                android:text="17 minut nazad" />
+            <TextView
+                android:id="@+id/content_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="5dp"
+                android:text="texting dsadsadsadsadsadsa"
+                android:textColor="#000"
+                android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/content_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/content_name"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/liked_p1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/content_image"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo1" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/liked_p2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/content_image"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/naturelogo" />
+            <TextView
+                android:id="@+id/num_liked"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/content_image"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/liked_p2"
+                android:text="Понравилось 22 людям" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/like_bar"/>
+            <View
+                android:id="@+id/hr"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/liked_p1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="#ebeef3" />
+
+            <LinearLayout
+                android:id="@+id/like_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hr"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <ImageButton
+                    android:id="@+id/ic_like_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:paddingLeft="15dp"
+                    android:src="@drawable/ic_favorite_black" />
+                <TextView
+                    android:id="@+id/like_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#FFF"
+                    android:paddingLeft="7dp"
+                    android:text="15" />
+                <ImageButton
+                    android:id="@+id/ic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_share_kotlin" />
+                <TextView
+                    android:id="@+id/share_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="#FFF"
+                    android:paddingLeft="7dp"
+                    android:text="15" />
+                <ImageButton
+                    android:id="@+id/ic_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/ic_views_kotlin" />
+                <TextView
+                    android:id="@+id/views_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#FFF"
+                    android:paddingLeft="7dp"
+                    android:text="15" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:background="#FFF"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_attach_file" />
+            <EditText
+                android:id="@+id/editComment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:ems="10"
+                android:focusable="false"
+                android:background="#FFF"
+                android:inputType="text"
+                android:hint="Введите сообщение" />
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:src="@drawable/ic_mood" />
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:src="@drawable/ic_send" />
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

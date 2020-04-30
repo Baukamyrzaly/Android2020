@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/image"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Something"
+        android:id="@+id/image_name"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginTop="5dp"
+        android:textColor="#5081b9"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_name"
+        android:text="17 minut nazad"
+        android:layout_toRightOf="@id/image"
+        android:layout_below="@id/image_name"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_name"
+        android:text="texting dsadsadsadsadsadsa"
+        android:layout_below="@id/image"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:lineSpacingExtra="5dp"
+        android:textSize="15sp"
+        android:textColor="#000" />
+    <ImageView
+        android:id="@+id/content_image"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp"
+        android:layout_below="@id/content_name"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="15dp" />
+    <View
+        android:id="@+id/hr"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/content_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#ebeef3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/like_bar"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/hr"
+        android:weightSum="6">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/ic_like_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:src="@drawable/ic_favorite_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="15"
+            android:id="@+id/like_num"
+            android:layout_toRightOf="@+id/ic_favorite"
+            android:background="#FFF"
+            android:paddingLeft="5dp"
+            android:layout_weight="2" />
+        <ImageButton
+            android:id="@+id/ic_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_toRightOf="@+id/like_num"
+            android:src="@drawable/ic_comment" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="15"
+            android:id="@+id/comment_num"
+            android:background="#FFF"
+            android:layout_toRightOf="@+id/ic_comment"
+            android:layout_weight="2"
+            android:paddingLeft="5dp" />
+        <ImageButton
+            android:id="@+id/ic_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/comment_num"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_share_kotlin" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="15"
+            android:layout_toRightOf="@+id/ic_share"
+            android:id="@+id/share_num"
+            android:background="#FFF"
+            android:paddingLeft="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#ebeef3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/like_bar" />
+</RelativeLayout>
